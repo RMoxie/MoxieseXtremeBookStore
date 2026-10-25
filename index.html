@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moxie's Extreme Bookstore</title>
+<meta name="description" content="Moxie's Extreme Bookstore — search millions of books on Amazon, plus RMoxie's own ebooks and used hardbacks.">
+<style>
+  body { font-family: Georgia, 'Times New Roman', serif; margin: 0; background: #fdf8f0; color: #2b2118; line-height: 1.6; }
+  header { background: #3b2a1a; color: #fff; padding: 32px 20px; text-align: center; }
+  header h1 { margin: 0 0 8px; font-size: 2.2em; }
+  header p { margin: 0; opacity: .9; }
+  main { max-width: 860px; margin: 0 auto; padding: 24px 20px 40px; }
+  .search-box { background: #fff; border: 2px solid #3b2a1a; border-radius: 12px; padding: 28px 24px; text-align: center; margin: 28px 0; }
+  .search-box h2 { margin-top: 0; }
+  .search-box form { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  .search-box input[type="text"] { flex: 1 1 320px; max-width: 480px; padding: 12px 14px; font-size: 1.05em; border: 1px solid #999; border-radius: 8px; }
+  .search-box button { padding: 12px 22px; font-size: 1.05em; background: #c47f17; color: #fff; border: none; border-radius: 8px; cursor: pointer; }
+  .search-box button:hover { background: #a96c12; }
+  .search-box .note { font-size: .9em; color: #555; margin-top: 12px; }
+  .quick-links { text-align: center; margin: 12px 0 28px; }
+  .quick-links a { display: inline-block; margin: 4px 6px; padding: 8px 14px; background: #efe3d0; color: #3b2a1a; border-radius: 20px; text-decoration: none; }
+  .quick-links a:hover { background: #e2d0b2; }
+  .section { background: #fff; border-radius: 12px; padding: 24px; margin: 20px 0; }
+  .section h2 { margin-top: 0; }
+  .coming { font-style: italic; color: #555; }
+  footer { text-align: center; font-size: .85em; color: #666; padding: 20px; }
+  footer a { color: #3b2a1a; }
+</style>
+</head>
+<body>
+<header>
+  <h1>📚 Moxie's Extreme Bookstore</h1>
+  <p>Great books, honest prices, and stories worth your time.</p>
+</header>
+<main>
+  <section class="search-box">
+    <h2>Search Books on Amazon</h2>
+    <p>Looking for something specific? Search Amazon's whole bookstore right from here.</p>
+    <form action="https://www.amazon.com/s" method="get" target="_blank" rel="sponsored noopener noreferrer">
+      <input type="hidden" name="tag" value="rmoxie-20">
+      <input type="text" name="k" placeholder="Title, author, or topic… e.g. Stephen King" required aria-label="Search Amazon for books">
+      <button type="submit">Search Amazon →</button>
+    </form>
+    <p class="note">Your search opens on Amazon, and anything you buy through it supports this little bookstore at no extra cost to you.</p>
+  </section>
+
+  <div class="quick-links">
+    <strong>Browse popular shelves:</strong><br>
+    <a href="https://www.amazon.com/s?k=fiction+best+sellers&tag=rmoxie-20" target="_blank" rel="sponsored noopener noreferrer">Fiction Best Sellers</a>
+    <a href="https://www.amazon.com/s?k=science+fiction+fantasy+books&tag=rmoxie-20" target="_blank" rel="sponsored noopener noreferrer">Sci-Fi &amp; Fantasy</a>
+    <a href="https://www.amazon.com/s?k=mystery+thriller+books&tag=rmoxie-20" target="_blank" rel="sponsored noopener noreferrer">Mystery &amp; Thriller</a>
+    <a href="https://www.amazon.com/s?k=self+help+books&tag=rmoxie-20" target="_blank" rel="sponsored noopener noreferrer">Self-Help</a>
+    <a href="https://www.amazon.com/s?k=childrens+books&tag=rmoxie-20" target="_blank" rel="sponsored noopener noreferrer">Kids' Books</a>
+    <a href="https://www.amazon.com/s?k=history+books&tag=rmoxie-20" target="_blank" rel="sponsored noopener noreferrer">History</a>
+  </div>
+
+  <section class="section">
+    <h2>✍️ My Own Ebooks</h2>
+    <p class="coming">Coming soon! RMoxie's own ebooks will live here — read them and donate whatever you feel like through PayPal, Cash App, or Venmo. First titles are being gathered now.</p>
+  </section>
+
+  <section class="section">
+    <h2>📖 Used Hardbacks</h2>
+    <p class="coming">Coming soon! Real hardback books from RMoxie's own shelves, listed one copy at a time. First arrivals are on their way — check back soon.</p>
+  </section>
+</main>
+<footer>
+  <p>As an Amazon Associate I earn from qualifying purchases.</p>
+  <p>See our <a href="/affiliate-disclosure.html">affiliate disclosure</a>.</p>
+</footer>
+</body>
+</html>
