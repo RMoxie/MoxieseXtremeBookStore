@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Book Collection — Moxie's Extreme Bookstore</title>
+<meta name="description" content="RMoxie's book collection at Moxie's Extreme Bookstore — browse by title, author, genre, pages and year, and buy your own copy on Amazon.">
+<style>
+  body { font-family: Georgia, 'Times New Roman', serif; margin: 0; background: #f4f7fb; color: #2b2118; line-height: 1.6; }
+  header { background: #1e3a5f; color: #fff; padding: 28px 20px; text-align: center; }
+  header h1 { margin: 0 0 8px; }
+  header a { color: #a9c8e8; }
+  main { max-width: 1000px; margin: 0 auto; padding: 24px 20px 40px; }
+  .intro { background: #fff; border: 2px solid #1e3a5f; border-radius: 12px; padding: 20px 24px; margin: 0 0 24px; }
+  #book-search { width: 100%; max-width: 520px; display: block; margin: 0 auto 24px; padding: 12px 14px; font-size: 1.05em; border: 1px solid #999; border-radius: 8px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px; overflow: hidden; }
+  th, td { padding: 12px 14px; text-align: left; border-bottom: 1px solid #ddd; }
+  th { background: #1e3a5f; color: #fff; cursor: pointer; white-space: nowrap; }
+  th:hover { background: #2a4f80; }
+  tr:hover td { background: #eef3f9; }
+  .btn-buy { display: inline-block; padding: 8px 14px; background: #c0392b; color: #fff; border-radius: 8px; text-decoration: none; white-space: nowrap; }
+  .btn-buy:hover { background: #96281b; }
+  #no-results { text-align: center; display: none; font-style: italic; color: #555; }
+  footer { text-align: center; font-size: .85em; color: #666; padding: 20px; }
+  footer a { color: #1e3a5f; }
+  @media (max-width: 700px) { table, tbody, tr, td { display: block; width: 100%; } thead { display: none; } tr { margin-bottom: 16px; border-bottom: 2px solid #1e3a5f; } td { border-bottom: 1px solid #eee; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>📖 My Book Collection</h1>
+  <p>Books from RMoxie's shelves, organized and ready to browse. Click a column heading to sort. <a href="index.html">← Back to the bookstore</a></p>
+</header>
+<main>
+  <section class="intro">
+    <p>This is a catalog of books in the collection — a way to browse what's on the shelves. These aren't downloads: when you find one you want, the button takes you to Amazon, where you buy your own copy and support the store at no extra cost to you.</p>
+  </section>
+
+  <input type="text" id="book-search" placeholder="Search the collection — title, author, or genre…" aria-label="Search the collection">
+
+  <table id="collection-table">
+    <thead>
+      <tr>
+        <th data-type="text">Title ↕</th>
+        <th data-type="text">Author ↕</th>
+        <th data-type="text">Genre ↕</th>
+        <th data-type="num">Pages ↕</th>
+        <th data-type="num">Year ↕</th>
+        <th>Format</th>
+        <th>Get It</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr data-search="along came a spider james patterson mystery / thriller">
+          <td>Along Came a Spider</td>
+          <td>James Patterson</td>
+          <td>Mystery / Thriller</td>
+          <td data-num="528">528</td>
+          <td data-num="1993">1993</td>
+          <td>Paperback</td>
+          <td><a href="https://www.amazon.com/dp/0446364193?tag=rmoxie-20" class="btn-buy" target="_blank" rel="sponsored noopener noreferrer">Get it on Amazon →</a></td>
+        </tr>
+        <tr data-search="the black echo michael connelly police procedural">
+          <td>The Black Echo</td>
+          <td>Michael Connelly</td>
+          <td>Police Procedural</td>
+          <td data-num="482">482</td>
+          <td data-num="2002">2002</td>
+          <td>Paperback</td>
+          <td><a href="https://www.amazon.com/dp/0446612731?tag=rmoxie-20" class="btn-buy" target="_blank" rel="sponsored noopener noreferrer">Get it on Amazon →</a></td>
+        </tr>
+        <tr data-search="the firm john grisham legal thriller">
+          <td>The Firm</td>
+          <td>John Grisham</td>
+          <td>Legal Thriller</td>
+          <td data-num="560">560</td>
+          <td data-num="2009">2009</td>
+          <td>Paperback</td>
+          <td><a href="https://www.amazon.com/dp/0440245923?tag=rmoxie-20" class="btn-buy" target="_blank" rel="sponsored noopener noreferrer">Get it on Amazon →</a></td>
+        </tr>
+        <tr data-search="killing floor lee child action thriller">
+          <td>Killing Floor</td>
+          <td>Lee Child</td>
+          <td>Action Thriller</td>
+          <td data-num="576">576</td>
+          <td data-num="2012">2012</td>
+          <td>Paperback</td>
+          <td><a href="https://www.amazon.com/dp/0515153656?tag=rmoxie-20" class="btn-buy" target="_blank" rel="sponsored noopener noreferrer">Get it on Amazon →</a></td>
+        </tr>
+        <tr data-search="tell no one harlan coben mystery / thriller">
+          <td>Tell No One</td>
+          <td>Harlan Coben</td>
+          <td>Mystery / Thriller</td>
+          <td data-num="370">370</td>
+          <td data-num="2002">2002</td>
+          <td>Paperback</td>
+          <td><a href="https://www.amazon.com/dp/0440236703?tag=rmoxie-20" class="btn-buy" target="_blank" rel="sponsored noopener noreferrer">Get it on Amazon →</a></td>
+        </tr>
+        <tr data-search="the da vinci code dan brown mystery / thriller">
+          <td>The Da Vinci Code</td>
+          <td>Dan Brown</td>
+          <td>Mystery / Thriller</td>
+          <td data-num="489">489</td>
+          <td data-num="2006">2006</td>
+          <td>Paperback</td>
+          <td><a href="https://www.amazon.com/dp/1400079179?tag=rmoxie-20" class="btn-buy" target="_blank" rel="sponsored noopener noreferrer">Get it on Amazon →</a></td>
+        </tr>
+        <tr data-search="absolute power david baldacci political thriller">
+          <td>Absolute Power</td>
+          <td>David Baldacci</td>
+          <td>Political Thriller</td>
+          <td data-num="560">560</td>
+          <td data-num="2024">2024</td>
+          <td>Paperback</td>
+          <td><a href="https://www.amazon.com/dp/1538735350?tag=rmoxie-20" class="btn-buy" target="_blank" rel="sponsored noopener noreferrer">Get it on Amazon →</a></td>
+        </tr>
+        <tr data-search="house of cards michael dobbs political thriller">
+          <td>House of Cards</td>
+          <td>Michael Dobbs</td>
+          <td>Political Thriller</td>
+          <td data-num="338">338</td>
+          <td data-num="1996">1996</td>
+          <td>Paperback</td>
+          <td><a href="https://www.amazon.com/dp/0684830914?tag=rmoxie-20" class="btn-buy" target="_blank" rel="sponsored noopener noreferrer">Get it on Amazon →</a></td>
+        </tr>
+        <tr data-search="naked in death j.d. robb futuristic mystery">
+          <td>Naked in Death</td>
+          <td>J.D. Robb</td>
+          <td>Futuristic Mystery</td>
+          <td data-num="320">320</td>
+          <td data-num="2007">2007</td>
+          <td>Paperback</td>
+          <td><a href="https://www.amazon.com/dp/0425220184?tag=rmoxie-20" class="btn-buy" target="_blank" rel="sponsored noopener noreferrer">Get it on Amazon →</a></td>
+        </tr>
+        <tr data-search="the lincoln lawyer michael connelly legal thriller">
+          <td>The Lincoln Lawyer</td>
+          <td>Michael Connelly</td>
+          <td>Legal Thriller</td>
+          <td data-num="528">528</td>
+          <td data-num="2006">2006</td>
+          <td>Paperback</td>
+          <td><a href="https://www.amazon.com/dp/0446616454?tag=rmoxie-20" class="btn-buy" target="_blank" rel="sponsored noopener noreferrer">Get it on Amazon →</a></td>
+        </tr>
+    </tbody>
+  </table>
+  <p id="no-results">No matches — try another title, author, or genre.</p>
+  <p style="text-align:center; font-style:italic; color:#555;">More books get added as the collection grows — send titles and they'll join the table.</p>
+</main>
+<footer>
+  <p>As an Amazon Associate I earn from qualifying purchases. Product prices and availability are accurate as of the date/time indicated and are subject to change. Any price and availability information displayed on Amazon at the time of purchase will apply to the purchase of these products.</p>
+  <p>See our <a href="affiliate-disclosure.html">affiliate disclosure</a>.</p>
+</footer>
+<script>
+  const input = document.getElementById('book-search');
+  const tbody = document.querySelector('#collection-table tbody');
+  const none = document.getElementById('no-results');
+  function filter() {
+    const q = input.value.trim().toLowerCase();
+    let shown = 0;
+    tbody.querySelectorAll('tr').forEach(tr => {
+      const hit = !q || tr.dataset.search.includes(q);
+      tr.style.display = hit ? '' : 'none';
+      if (hit) shown++;
+    });
+    none.style.display = shown ? 'none' : 'block';
+  }
+  input.addEventListener('input', filter);
+  document.querySelectorAll('#collection-table th[data-type]').forEach(th => {
+    th.addEventListener('click', () => {
+      const idx = [...th.parentNode.children].indexOf(th);
+      const type = th.dataset.type;
+      const rows = [...tbody.querySelectorAll('tr')];
+      const asc = th.dataset.dir !== 'asc';
+      rows.sort((a, b) => {
+        const av = a.children[idx].dataset.num || a.children[idx].textContent.trim();
+        const bv = b.children[idx].dataset.num || b.children[idx].textContent.trim();
+        return type === 'num' ? (asc ? av - bv : bv - av) : (asc ? av.localeCompare(bv) : bv.localeCompare(av));
+      });
+      rows.forEach(r => tbody.appendChild(r));
+      document.querySelectorAll('#collection-table th').forEach(h => delete h.dataset.dir);
+      th.dataset.dir = asc ? 'asc' : 'desc';
+    });
+  });
+</script>
+</body>
+</html>
