@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Own Ebooks — Moxie's Extreme Bookstore</title>
+<meta name="description" content="RMoxie's own ebooks at Moxie's Extreme Bookstore — read them and donate whatever you feel like through PayPal, Cash App, or Venmo.">
+<style>
+  body { font-family: Georgia, 'Times New Roman', serif; margin: 0; background: #f4f7fb; color: #2b2118; line-height: 1.6; }
+  header { background: #1e3a5f; color: #fff; padding: 28px 20px; text-align: center; }
+  header h1 { margin: 0 0 8px; }
+  header a { color: #a9c8e8; }
+  main { max-width: 960px; margin: 0 auto; padding: 24px 20px 40px; }
+  .donate-note { background: #fff; border: 2px solid #1e3a5f; border-radius: 12px; padding: 20px 24px; text-align: center; margin: 0 0 24px; }
+  .donate-note a { color: #1e3a5f; font-weight: bold; }
+  #book-search { width: 100%; max-width: 520px; display: block; margin: 0 auto 24px; padding: 12px 14px; font-size: 1.05em; border: 1px solid #999; border-radius: 8px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+  .book-card { background: #fff; border-radius: 12px; padding: 20px; text-align: center; }
+  .book-cover { width: 160px; height: 240px; object-fit: cover; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+  .book-card h3 { margin: 12px 0 2px; }
+  .author { color: #666; margin: 0 0 10px; font-style: italic; }
+  .donate-btns a { display: inline-block; margin: 4px 4px; padding: 8px 14px; background: #c0392b; color: #fff; border-radius: 8px; text-decoration: none; font-size: .95em; }
+  .donate-btns a:hover { background: #96281b; }
+  #no-results { text-align: center; display: none; font-style: italic; color: #555; }
+  .soon { text-align: center; font-style: italic; color: #555; background: #fff; border-radius: 12px; padding: 24px; }
+  footer { text-align: center; font-size: .85em; color: #666; padding: 20px; }
+  footer a { color: #1e3a5f; }
+</style>
+</head>
+<body>
+<header>
+  <h1>✍️ My Own Ebooks</h1>
+  <p>Stories written by RMoxie. Read them, enjoy them, and donate whatever you feel like. <a href="index.html">← Back to the bookstore</a></p>
+</header>
+<main>
+  <section class="donate-note">
+    <h2 style="margin-top:0;">Pay What You Want</h2>
+    <p>Every ebook here is offered on a donate-what-you-want basis. Download the book, and if you enjoy it, send a donation of your choice through any of these:</p>
+    <p><a href="https://paypal.me/RMoxie" target="_blank" rel="noopener noreferrer">PayPal: paypal.me/RMoxie</a> &nbsp;|&nbsp; <a href="https://cash.app/$Moxiejr" target="_blank" rel="noopener noreferrer">Cash App: $Moxiejr</a> &nbsp;|&nbsp; <a href="https://venmo.com/Moxiejr" target="_blank" rel="noopener noreferrer">Venmo: @Moxiejr</a></p>
+  </section>
+
+  <input type="text" id="book-search" placeholder="Search my ebooks — by title or author…" aria-label="Search my ebooks">
+
+  <div class="grid" id="book-grid">
+    <!-- Ebook cards go here as files arrive. Card format:
+    <article class="book-card" data-search="title author">
+      <img class="book-cover" src="covers/title.jpg" alt="Title by Author cover" loading="lazy">
+      <h3>Title</h3>
+      <p class="author">by RMoxie</p>
+      <p>One-line description.</p>
+      <p><a href="ebooks/title.epub">Download EPUB</a> | <a href="ebooks/title.pdf">Download PDF</a></p>
+      <div class="donate-btns">
+        <a href="https://paypal.me/RMoxie" target="_blank" rel="noopener noreferrer">Donate via PayPal</a>
+        <a href="https://cash.app/$Moxiejr" target="_blank" rel="noopener noreferrer">Donate via Cash App</a>
+        <a href="https://venmo.com/Moxiejr" target="_blank" rel="noopener noreferrer">Donate via Venmo</a>
+      </div>
+    </article>
+    -->
+  </div>
+  <p id="no-results">No matches — try another title or author.</p>
+  <p class="soon">First titles are being gathered now — check back soon. New books will appear here, organized by title, as they arrive.</p>
+</main>
+<footer>
+  <p>As an Amazon Associate I earn from qualifying purchases.</p>
+  <p>See our <a href="affiliate-disclosure.html">affiliate disclosure</a>.</p>
+</footer>
+<script>
+  const input = document.getElementById('book-search');
+  const cards = document.querySelectorAll('.book-card');
+  const none = document.getElementById('no-results');
+  input.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    let shown = 0;
+    cards.forEach(c => {
+      const hit = !q || c.dataset.search.includes(q);
+      c.style.display = hit ? '' : 'none';
+      if (hit) shown++;
+    });
+    none.style.display = shown ? 'none' : 'block';
+  });
+</script>
+</body>
+</html>
