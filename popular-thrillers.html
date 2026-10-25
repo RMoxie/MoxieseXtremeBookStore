@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Popular Thrillers &amp; Mysteries — Moxie's Extreme Bookstore</title>
+<meta name="description" content="Browse popular thrillers and mysteries on Moxie's Extreme Bookstore — Patterson, Connelly, Grisham, Child, Coben, Brown, Baldacci, Dobbs and Robb — and buy on Amazon.">
+<style>
+  body { font-family: Georgia, 'Times New Roman', serif; margin: 0; background: #fdf8f0; color: #2b2118; line-height: 1.6; }
+  header { background: #3b2a1a; color: #fff; padding: 28px 20px; text-align: center; }
+  header h1 { margin: 0 0 8px; }
+  header a { color: #f0d9a8; }
+  main { max-width: 960px; margin: 0 auto; padding: 24px 20px 40px; }
+  #book-search { width: 100%; max-width: 520px; display: block; margin: 0 auto 24px; padding: 12px 14px; font-size: 1.05em; border: 1px solid #999; border-radius: 8px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+  .book-card { background: #fff; border-radius: 12px; padding: 20px; text-align: center; }
+  .book-cover { width: 160px; height: 240px; object-fit: cover; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+  .book-card h3 { margin: 12px 0 2px; }
+  .author { color: #666; margin: 0 0 10px; font-style: italic; }
+  .btn-buy { display: inline-block; margin-top: 10px; padding: 10px 18px; background: #c47f17; color: #fff; border-radius: 8px; text-decoration: none; }
+  .btn-buy:hover { background: #a96c12; }
+  #no-results { text-align: center; display: none; font-style: italic; color: #555; }
+  footer { text-align: center; font-size: .85em; color: #666; padding: 20px; }
+  footer a { color: #3b2a1a; }
+</style>
+</head>
+<body>
+<header>
+  <h1>🔥 Popular Thrillers &amp; Mysteries</h1>
+  <p>Browse right here, then buy on Amazon when you're ready. <a href="/">← Back to the bookstore</a></p>
+</header>
+<main>
+  <input type="text" id="book-search" placeholder="Search this shelf — try 'Patterson' or 'Reacher'… " aria-label="Search books on this page">
+  <div class="grid" id="book-grid">
+      <article class="book-card" data-search="along came a spider james patterson">
+        <img class="book-cover" src="https://covers.openlibrary.org/b/isbn/0446364193-L.jpg" alt="Along Came a Spider by James Patterson book cover" loading="lazy">
+        <h3>Along Came a Spider</h3>
+        <p class="author">by James Patterson</p>
+        <p>The case that launched Alex Cross: a brilliant D.C. detective hunts a kidnapper playing a deadly game.</p>
+        <a href="https://www.amazon.com/dp/0446364193?tag=rmoxie-20" class="btn-buy" target="_blank" rel="sponsored noopener noreferrer">Buy on Amazon →</a>
+      </article>
+      <article class="book-card" data-search="the black echo michael connelly">
+        <img class="book-cover" src="https://covers.openlibrary.org/b/isbn/0446612731-L.jpg" alt="The Black Echo by Michael Connelly book cover" loading="lazy">
+        <h3>The Black Echo</h3>
+        <p class="author">by Michael Connelly</p>
+        <p>Harry Bosch's debut: a body in a drainpipe pulls the LAPD detective back to his Vietnam tunnel-rat past.</p>
+        <a href="https://www.amazon.com/dp/0446612731?tag=rmoxie-20" class="btn-buy" target="_blank" rel="sponsored noopener noreferrer">Buy on Amazon →</a>
+      </article>
+      <article class="book-card" data-search="the firm john grisham">
+        <img class="book-cover" src="https://covers.openlibrary.org/b/isbn/0440245923-L.jpg" alt="The Firm by John Grisham book cover" loading="lazy">
+        <h3>The Firm</h3>
+        <p class="author">by John Grisham</p>
+        <p>A young lawyer's dream job at a rich Memphis firm turns out to be a front for the Mob — and the FBI wants him to flip.</p>
+        <a href="https://www.amazon.com/dp/0440245923?tag=rmoxie-20" class="btn-buy" target="_blank" rel="sponsored noopener noreferrer">Buy on Amazon →</a>
+      </article>
+      <article class="book-card" data-search="killing floor lee child">
+        <img class="book-cover" src="https://covers.openlibrary.org/b/isbn/0515153656-L.jpg" alt="Killing Floor by Lee Child book cover" loading="lazy">
+        <h3>Killing Floor</h3>
+        <p class="author">by Lee Child</p>
+        <p>Jack Reacher drifts into a small Georgia town and gets arrested for a murder he didn't commit — within the hour.</p>
+        <a href="https://www.amazon.com/dp/0515153656?tag=rmoxie-20" class="btn-buy" target="_blank" rel="sponsored noopener noreferrer">Buy on Amazon →</a>
+      </article>
+      <article class="book-card" data-search="tell no one harlan coben">
+        <img class="book-cover" src="https://covers.openlibrary.org/b/isbn/0440236703-L.jpg" alt="Tell No One by Harlan Coben book cover" loading="lazy">
+        <h3>Tell No One</h3>
+        <p class="author">by Harlan Coben</p>
+        <p>Eight years after his wife's murder, David Beck gets an email that suggests she might still be alive.</p>
+        <a href="https://www.amazon.com/dp/0440236703?tag=rmoxie-20" class="btn-buy" target="_blank" rel="sponsored noopener noreferrer">Buy on Amazon →</a>
+      </article>
+      <article class="book-card" data-search="the da vinci code dan brown">
+        <img class="book-cover" src="https://covers.openlibrary.org/b/isbn/1400079179-L.jpg" alt="The Da Vinci Code by Dan Brown book cover" loading="lazy">
+        <h3>The Da Vinci Code</h3>
+        <p class="author">by Dan Brown</p>
+        <p>A murdered Louvre curator leaves a trail of codes that pulls Robert Langdon into a centuries-old secret.</p>
+        <a href="https://www.amazon.com/dp/1400079179?tag=rmoxie-20" class="btn-buy" target="_blank" rel="sponsored noopener noreferrer">Buy on Amazon →</a>
+      </article>
+      <article class="book-card" data-search="absolute power david baldacci">
+        <img class="book-cover" src="https://covers.openlibrary.org/b/isbn/1538735350-L.jpg" alt="Absolute Power by David Baldacci book cover" loading="lazy">
+        <h3>Absolute Power</h3>
+        <p class="author">by David Baldacci</p>
+        <p>A burglar witnesses a crime involving the President — and becomes the one man who can expose the cover-up.</p>
+        <a href="https://www.amazon.com/dp/1538735350?tag=rmoxie-20" class="btn-buy" target="_blank" rel="sponsored noopener noreferrer">Buy on Amazon →</a>
+      </article>
+      <article class="book-card" data-search="house of cards michael dobbs">
+        <img class="book-cover" src="https://covers.openlibrary.org/b/isbn/0684830914-L.jpg" alt="House of Cards by Michael Dobbs book cover" loading="lazy">
+        <h3>House of Cards</h3>
+        <p class="author">by Michael Dobbs</p>
+        <p>Francis Urquhart will betray anyone to become Prime Minister — the political thriller that started it all.</p>
+        <a href="https://www.amazon.com/dp/0684830914?tag=rmoxie-20" class="btn-buy" target="_blank" rel="sponsored noopener noreferrer">Buy on Amazon →</a>
+      </article>
+      <article class="book-card" data-search="naked in death j.d. robb">
+        <img class="book-cover" src="https://covers.openlibrary.org/b/isbn/0425220184-L.jpg" alt="Naked in Death by J.D. Robb book cover" loading="lazy">
+        <h3>Naked in Death</h3>
+        <p class="author">by J.D. Robb</p>
+        <p>In 2058 New York, Lt. Eve Dallas hunts a killer — and falls for her prime suspect.</p>
+        <a href="https://www.amazon.com/dp/0425220184?tag=rmoxie-20" class="btn-buy" target="_blank" rel="sponsored noopener noreferrer">Buy on Amazon →</a>
+      </article>
+      <article class="book-card" data-search="the lincoln lawyer michael connelly">
+        <img class="book-cover" src="https://covers.openlibrary.org/b/isbn/0446616454-L.jpg" alt="The Lincoln Lawyer by Michael Connelly book cover" loading="lazy">
+        <h3>The Lincoln Lawyer</h3>
+        <p class="author">by Michael Connelly</p>
+        <p>Mickey Haller defends clients from the back of his Lincoln — until a 'dream case' turns into a nightmare.</p>
+        <a href="https://www.amazon.com/dp/0446616454?tag=rmoxie-20" class="btn-buy" target="_blank" rel="sponsored noopener noreferrer">Buy on Amazon →</a>
+      </article>
+  </div>
+  <p id="no-results">No matches on this shelf — try the <a href="/">Amazon search box</a> for the wider bookstore.</p>
+</main>
+<footer>
+  <p>As an Amazon Associate I earn from qualifying purchases. Product prices and availability are accurate as of the date/time indicated and are subject to change. Any price and availability information displayed on Amazon at the time of purchase will apply to the purchase of these products.</p>
+  <p>See our <a href="/affiliate-disclosure.html">affiliate disclosure</a>.</p>
+</footer>
+<script>
+  const input = document.getElementById('book-search');
+  const cards = document.querySelectorAll('.book-card');
+  const none = document.getElementById('no-results');
+  input.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    let shown = 0;
+    cards.forEach(c => {
+      const hit = !q || c.dataset.search.includes(q);
+      c.style.display = hit ? '' : 'none';
+      if (hit) shown++;
+    });
+    none.style.display = shown ? 'none' : 'block';
+  });
+</script>
+</body>
+</html>
